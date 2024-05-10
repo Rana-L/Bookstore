@@ -67,34 +67,11 @@ body {
 }
 
 #nav li a:hover {
-  font-weight: bold;
   color: red;
 }
 
-.change {
-  display: block;
-}
-
-.change .bar {
-  background-color: black;
-}
-
-.change #bar1 {
-  transform: translateY(4px) rotateZ(-45deg);
-}
-
-.change #bar2 {
-  opacity: 0;
-}
-
-.change #bar3 {
-  transform: translateY(-6px) rotateZ(45deg);
-}
-
-.change-bg {
-  width: 520px;
-  height: 460px;
-  transform: translate(-60%, -30%);
+.mobile-active {
+  display: none;
 }
 
 /* book content & Image */
@@ -165,48 +142,69 @@ body {
 }
 /* Payment Page */
 
-.container {
-  max-width: 400px;
+.payment-container {
+  max-width: 50%;
   margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
+  padding: 40px;
+  background-color: #d3d3d3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  text-align: center;
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 label {
-  display: block;
+  color: black;
   margin-bottom: 5px;
   font-weight: bold;
+  width: 150px;
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 80%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
+.expiration-input {
+  width: 83%;
+}
+
+select {
+  width: 30%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#m {
+  margin-right: 1rem;
+}
+
 button[type="submit"] {
-  background-color: #007bff;
+  background-color: red;
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #0056b3;
+.success-container h3{
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
 }
-.mobile-active {
-  display: none;
-}
+
 @media (max-width: 768px) {
   #menu h3 {
     display: none;
@@ -251,5 +249,17 @@ button[type="submit"]:hover {
   }
   .book-container {
     grid-template-columns: auto;
+  }
+  .payment-input {
+    display: block;
+  }
+  input, select {
+    margin-top: 10px;
+  }
+  .expiration-input {
+    width: 100%;
+  }
+  select {
+    width: 35%;
   }
 }
