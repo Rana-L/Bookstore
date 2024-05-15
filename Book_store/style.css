@@ -144,7 +144,7 @@ body {
 
 .payment-container {
   max-width: 50%;
-  margin: 50px auto;
+  margin: auto;
   padding: 40px;
   background-color: #d3d3d3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -159,6 +159,16 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+.pay-image{
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  height: 3em;
+}
+.pay-card{
+  padding: 25px;
+  text-align: center;
 }
 
 label {
@@ -203,6 +213,28 @@ button[type="submit"] {
 .success-container h3{
   border-bottom: 1px solid black;
   padding-bottom: 1rem;
+  font-size: 1.5rem;
+  
+}
+.success-container p{
+  text-align: center;
+}
+.success-thank  {
+  text-align: center;
+}
+.success-image {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  height: 3em;
+}
+
+/* Styles for the empty grey container */
+.empty-container {
+  max-width: 50rem; 
+  height: 25rem; 
+  margin: 3rem auto;
+  background-color: rgb(198, 196, 196);
 }
 
 @media (max-width: 768px) {

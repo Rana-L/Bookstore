@@ -38,8 +38,19 @@
 
     <div class="success-container">
         <h3>You have successfully entered your credit card details!</h3>
-        
+        <p><strong> Debit / Credit Cards </strong>  <img class="success-image" src="./Images/master_card.jpg"/>
+          Your card number ends in **** **** **** <span id="lastFourDigits">****</span></p>
     </div>
+
+      <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const lastFourDigits = urlParams.get('lastFourDigits');
+
+        document.getElementById('lastFourDigits').textContent = lastFourDigits;
+      </script>
+    
+    <div class="empty-container"></div>
+    <p class="success-thank">Thank you for shopping with us!</p>
 
     <footer class="footer">
       <ul class="social">
@@ -59,5 +70,5 @@
       <p>Copyright 2024©</p>
     </footer>
   </body>
-  <script src="js/script.js"></script>
+  <script src="JavaScript/script.js"></script>
 </html>
